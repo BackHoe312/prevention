@@ -1,7 +1,10 @@
-var progressIndicator = '<div id="i-am-progress-indicator"></div>';
-$('body').append(progressIndicator);
-
-$(window).on('scroll', function(){
-var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
-  $('#i-am-progress-indicator').width(currentPercentage+'%');
-});
+$(window).load(function(){
+    $(window).scroll(function() {
+    var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
+    console.log(wintop);
+    var totalScroll = (wintop/(docheight-winheight))*100;
+    console.log("total scroll" + totalScroll);
+    $(".progress-bar").css("width",totalScroll+"%");
+    });
+    
+    });
