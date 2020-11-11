@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js.js"></script>
     <style>
-        
         body{
             margin: 0;
-            
         }
-        
-       
-        .top2{
+        .header {
             background-color: #6b2d2d;
             display: flex;
             height: 70px;
             justify-content: space-between;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
         }
         ul{
             width: auto;
@@ -38,9 +39,7 @@
         }
         a:hover{
             color: rgb(145, 109, 109);
-          
         }
-        
         .img1{
             width: 280px;
             height: 390px;
@@ -62,8 +61,6 @@
             width: 100%;
             height: 450px;
             position: relative;
-
-
         }
         .line1{
             background-color: #a1a7b9;
@@ -115,7 +112,7 @@
             width:100%;
             
         }
-        .foot_logo { height: 38px;  }
+        .foot_logo { height: 38px; }
         .logoimg {
             width: 155px;
             height: 60px;
@@ -134,24 +131,26 @@
         }
         .sdhimg {
             width: 80px;
-            height: 32px;
+            height: 47px;
             position: absolute;
-            left: 30px;
-            top: 80px;
+            left: 460px;
+            top: 70px;
           
         }
         .no_bold {
             color: rgb(240, 219, 219);
             font-weight: bold;
-            margin: 5px;
-            margin-top: 0px;
-            margin-right: 10px;
+            margin: 10px;
+            position: relative;
+            top: 5px;
         }
         .yes_bold {
             color: #a8a8a8;
             margin-right: 10px;
             font-size: x-large;
             font-weight: bold;
+            display:block;
+            margin-top: 20px;
         }
         .logoimg1{
             width: 150px;
@@ -182,12 +181,10 @@
             margin: 5px;
             color: #6b2d2d;
         }
-        
-
         h1{
             text-align: center;
              color: #b1aaab;
-             }
+        }
         .box{
             width: 100%; 
             height: 800px;
@@ -200,50 +197,48 @@
             text-align: center;
             list-style: none;
             text-align: center;
-            }
+         }
 
         .box a{
             line-height: 0px;
             text-decoration: none;
             color: #fff;
-            
-            
-            }
+        }
 
         .box ul{
             display: flex;
             justify-content: space-between;
             width: 1000px;
             margin: 0 auto;
-           }
-           
-        
-       
+        }
     </style>
 </head>
 <body>
     <div>
-        <div class="top2">
+        <div class="header">
             <a href="main.html"><img src="./img/web_logo.png" class="logoimg1"></a>
-        <nav>
-            <ul>
-                <li>
-                    <img src="./img/사례아이콘.png" alt="" class="png1">
-                    <a href="#">도박예방수치</a>
-                </li>
-                <li>
-                    <img src="./img/도박종류아이콘.png" alt="" class="png2">
-                    <a href="#">도박예방사례</a>
-                </li>
-                <li>
-                    <a href="#">도박 종류</a>
-                </li>
-                <li>
-                    <a href="#">도박예방 행사</a>
-                </li>
-               
-            </ul>
-        </nav>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar-id"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="./img/사례아이콘.png" alt="" class="png1">
+                        <a href="#">도박예방수치</a>
+                    </li>
+                    <li>
+                        <img src="./img/도박종류아이콘.png" alt="" class="png2">
+                        <a href="#">도박예방사례</a>
+                    </li>
+                    <li>
+                        <a href="#">도박 종류</a>
+                    </li>
+                    <li>
+                        <a href="#">도박예방 행사</a>
+                    </li>
+                
+                </ul>
+            </nav>
         </div>
         <section>
 
@@ -268,12 +263,14 @@
                 </div>
             </div>
             <div class="box">
-                <h1>도박종류</h1>
+                <h1 class="topic2">도박종류</h1>
                 <ul>
                     <li class="li11"><a href="#">한국 전통 도박</a></li>
                     <li class="li11"><a href="#">스포츠 도박</a></li>
                     <li class="li11"><a href="#">화투</a></li>
+
                 </ul>
+
             </div>
 
         </section>

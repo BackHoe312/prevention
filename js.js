@@ -1,11 +1,7 @@
-$(window).scroll(function() {
+var progressIndicator = '<div id="i-am-progress-indicator"></div>';
+$('body').append(progressIndicator);
 
-    var wins = $(this).scrollTop();
-    var hei = $('.content').outerHeight(); //전체 페이지 높이
-    var hei2 = $(window).outerHeight(); //윈도우의 높이
-    var height = hei - hei2;
-    var bar = (wins / height) * 100;
-  
-    $('#myBar').css('width', bar + '%');
-  
-  });
+$(window).on('scroll', function(){
+var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
+  $('#i-am-progress-indicator').width(currentPercentage+'%');
+});
